@@ -1,0 +1,16 @@
+name: Standard-Check
+
+on: push
+
+jobs:
+  standard-check:
+    name: Standard check code
+    runs-on: ubuntu-latest
+    steps:
+      - name: check code
+        uses: actions/checkout@v2
+        
+      - name: Run Standard-Check
+        uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: main
